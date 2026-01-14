@@ -32,7 +32,7 @@ public class AdvancedGridCommand implements CalculationCommand {
 
             // Extraemos dígitos verticales
             String verticalNumStr = IntStream.range(0, height - 1)
-                    .mapToObj(r -> rows.get(r).length() > c ? rows.get(r).charAt(c) : ' ')
+                    .mapToObj(r -> rows.get(r).length() > c ? rows.get(r).charAt(c) : ' ') // cada i de fila(r) en un caracter
                     .filter(Character::isDigit)
                     .map(String::valueOf)
                     .collect(Collectors.joining());
